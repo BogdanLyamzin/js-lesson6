@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let product = {
+        name : "Lenovo",
+        "full name" : "Lenovo IdeaPad",
+        category : "laptops",
+        price: 1000,
+        makeDiscount(dValue){
+            return this.price *(1 - dValue/100);
+        }
+
+    };
+
+    let discount = +prompt("Enter your discount");
+    console.log(product.makeDiscount(discount));
+</script>
+</body>
+</html>

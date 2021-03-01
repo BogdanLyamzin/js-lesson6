@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        // function changeName(obj, newName) {
+        //
+        // }
+
+        let student = {
+            name: "Винни",
+            "last name": "Пух",
+            "homeworks done": 2
+        };
+        console.log(student);
+        // let student2 = {};
+        // student2.name = student.name;
+        // console.log(student2.name);
+        // student2.name = "Пятак";
+        // console.log(student2.name);
+        // console.log(student.name);
+        let student2 = {};
+
+        for (key in student) {
+            student2[key] = student[key];
+        }
+        console.log(student2);
+        // let student2 = student;
+        // student2.name = "Пятак";
+        // student2["last name"] = "Заметеревший";
+        // console.log(student2.name);
+        // console.log(student2["last name"]);
+        //
+        // console.log(student.name);
+        // console.log(student["last name"]);
+
+        // if(student["homeworks done"] < 5) {
+        //     let newStudentName = prompt("Я тучка-тучка-тучка, я вовсе не медведь!");
+        //     changeName(obj, newStudentName);
+        // }
+
+    </script>
+</body>
+
+</html>

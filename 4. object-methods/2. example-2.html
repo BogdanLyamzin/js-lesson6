@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects metods</title>
+</head>
+<body>
+<script>
+    let coffeeMachine = {
+        water: 1000,
+        coffee: 200,
+        milk: 500,
+        makeCoffee: function (coffeeType) {
+            if(coffeeType == "капучино"){
+                this.water -= 20;
+                this.coffee -= 10;
+                this.milk -= 10;
+                console.log(`Получи свое ${coffeeType}`);
+            }
+            if(coffeeType == "американо") {
+                this.water -=200;
+                this.coffee -=20;
+                console.log(`Получи свое ${coffeeType}`);
+            }
+            if(coffeeType == "экспрессо") {
+                console.log("Выучи .... русский язык!");
+            }
+        }
+    }
+    let coffeeWant = prompt("Чего изволите?");
+    coffeeMachine.makeCoffee(coffeeWant);
+
+    slider.img = "img/img1.jpg, img/img2.jpg";
+    slider.slideType = "slow";
+    slider.start();
+
+</script>
+</body>
+</html>

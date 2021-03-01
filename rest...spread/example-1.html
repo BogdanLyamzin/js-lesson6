@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    const createPhrase = function(...words) { // ... "Мишка", "очень", "любит", "мед"
+      // const words = Array.from(arguments);
+      const result = words.join(" ");
+      return result;
+    };
+    */
+    const createPhrase = (...words) => words.join(" ");
+    const arr = ["Саша", "Маша", "Вика"];
+    // console.log(...arr);
+    
+    const phrase = createPhrase("Мишка", "очень", "любит", "мед");
+    console.log(phrase)
+  </script>
+</body>
+</html>

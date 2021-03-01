@@ -8,19 +8,26 @@
     <script>
         obj1 = {
             name: "Маленький Йода",
-            friend: "Мандалорец"
-        }
+            friends: {
+                first: "Мандалорец",
+                second: "Кара"
+            }
 
-        const obj2 = {};
-        obj2.name = obj1.name;
-        obj2.friend = obj1.friend;
+        };
 
-        const obj3 = {
-            name: obj1.name,
-            friend: obj1.friend
-        }
+        const obj2 = Object.assign({}, obj1);
 
-        // Object.assign
+        const obj3 = {};
+        for(const key in obj1) {
+        obj3[key] = obj1[key];
+        // obj3.name = "Маленький Йода"
+        // obj3.friends = obj1.friends;
+    };
+
+        obj1.name = "Подросший Йода";
+        obj1.friends.first = "Магистр Люк";
+        console.log(obj1);
+        console.log(obj2)
     </script>
 </body>
 </html>

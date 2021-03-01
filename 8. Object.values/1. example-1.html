@@ -5,6 +5,42 @@
     <title>Title</title>
 </head>
 <body>
+    <script>
 
+        const student = {
+            name: "Александр",
+            lastName: "Репета",
+            age: 42,
+            tabel: {
+                history: 7,
+                politic: 12,
+                serials: 6
+            },
+            getAverageScore() {
+                let scoreSum = 0;
+                // let scoreCount = Object.keys(this.tabel).length; 
+                const scores = Object.values(this.tabel);
+                for(const value of scores) { 
+                    scoreSum += value;
+                }
+                const result = scoreSum / scores.length;
+                return result;
+            },
+            getWorstScore(){
+                const scores = Object.values(this.tabel);
+                let result = scores[0];
+                for(const value of scores){
+                    if(value < result) {
+                        result = value;
+                    }
+                };
+                return result;
+            }
+        };
+        // console.log(Object.values(student))
+        console.log(student.getWorstScore())
+
+        
+    </script>
 </body>
 </html>

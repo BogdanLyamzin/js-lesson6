@@ -11,10 +11,20 @@
         friend: "Мандалорец",
         music: "Eminem"
     };
-    const obj2 = cloneObj(obj1);
-    obj1.music = "Сопливые песенки";
-    console.log(obj1.music);
-    console.log(obj2.music);
+
+    const obj2 = {};
+
+    for(const key in obj1) {
+        obj2[key] = obj1[key];
+        // obj2.name = "Маленький Йода"
+        // obj2.friend = "Мандалорец"
+        // obj2.music = "Eminem"
+    };
+
+    obj1.name = "Подросший Йода";
+    console.log(obj1);
+    console.log(obj2)
+
 
 
 </script>

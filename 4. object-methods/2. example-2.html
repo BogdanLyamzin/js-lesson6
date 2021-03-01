@@ -10,19 +10,19 @@
         water: 1000,
         coffee: 200,
         milk: 500,
-        makeCoffee: function (coffeeType) {
-            if(coffeeType == "капучино"){
+        makeCoffee(coffeeType) {
+            if(coffeeType === "капучино"){
                 this.water -= 20;
                 this.coffee -= 10;
                 this.milk -= 10;
                 console.log(`Получи свое ${coffeeType}`);
             }
-            if(coffeeType == "американо") {
+            if(coffeeType === "американо") {
                 this.water -=200;
                 this.coffee -=20;
                 console.log(`Получи свое ${coffeeType}`);
             }
-            if(coffeeType == "экспрессо") {
+            if(coffeeType === "экспрессо") {
                 console.log("Выучи .... русский язык!");
             }
         }

@@ -5,6 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+    <script>
 
+        // console.log(typeof 42);
+        // console.log(typeof "next");
+        // console.log(typeof true)
+
+        const student = {
+            name: "Александр",
+            lastName: "Репета",
+            age: 42,
+            tabel: {
+                history: 7,
+                politic: 12,
+                serials: 9
+            },
+            getAverageScore() {
+                let scoreSum = 0;
+                let scoreCount = 0;
+                for(const key in this.tabel) { // key = "history", key = "politic"
+                    scoreSum += this.tabel[key];
+                    scoreCount += 1;  
+                }
+                const result = scoreSum / scoreCount
+                return result;
+            }
+        };
+
+        console.log(student.getAverageScore())
+
+        
+    </script>
 </body>
 </html>

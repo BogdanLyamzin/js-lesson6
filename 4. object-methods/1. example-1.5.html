@@ -8,22 +8,20 @@
 
 <body>
     <script>
-        const studentGoIt = {
+        const Student = {
             history: 7,
             politic: 12,
             serials: 9,
             getAverageScore() {
-                const result = (studentGoIt.history + studentGoIt.politic + studentGoIt.serials) / 3
+                const result = (this.history + this.politic + this.serials) / 3
                 return (result);
             }
         };
 
-        console.log(studentGoIt);
-        console.log(studentGoIt.getAverageScore());
+        console.log(Student);
+        console.log(Student.getAverageScore());
 
-        studentGoIt.getMaxScore = function(){
-            let maxScore = 0;
-        }
+      
 
     </script>
 </body>
